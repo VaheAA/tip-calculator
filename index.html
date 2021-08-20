@@ -12,15 +12,16 @@
 </head>
 <body>
 <main>
+  <div class="logo">
+    <img src="/images/logo.svg" alt="">
+   </div>
 <div class="wrapper">
-<div class="logo">
- <img src="/images/logo.svg" alt="">
-</div>
   <div class="calculator">
    <div class="calculator__left">
    <div class="inner">
      <form class="calculator__form">
       <label for="bill">Bill</label>
+      <img class="bill" src="/images/icon-dollar.svg" alt="">
       <input type="text" name="bill" id="bill">
       <label for="tip">Select tip %</label>
       <div class="tip-percent">
@@ -38,11 +39,11 @@
    </div>
     <div class="calculator__right">
         <div class="amount">
-          <p class="title">Tip amount <span>/ Person</span></p>
+          <p class="title">Tip amount <br> <span>/ Person</span></p>
           <span class="sum">$0.00</span>
         </div>
         <div class="total">
-           <p class="title">Total <span>/ Person</span></p>
+           <p class="title">Total <br><span>/ Person</span></p>
            <span class="sum">$0.00</span>
         </div>
         <button class="reset-btn">Reset</button>

@@ -28,14 +28,30 @@ a, a:active {
     color: inherit;
 }
 
+input {
+    outline: none;
+    padding: 12px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--lighGrayCyan2);
+    color: var(--veryDarkCyan);
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+}
+
+
+
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    background-color: var(--white);
+    border-radius: 25px;
 }
 
 .inner {
-    padding: 20px;
+    padding: 50px 30px;
 }
 
 .logo {
@@ -66,4 +82,36 @@ a, a:active {
     flex-direction: column;
     width: 100%;
     background-color: var(--veryDarkCyan);
+    padding: 50px 30px;
+    border-radius: 25px;
+}
+
+.amount {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total {
+    margin-bottom: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    color: var(--white);
+}
+
+.title > span {
+    color: var(--lightGrayCyan);
+    font-size: 12px;
+}
+
+.reset-btn {
+    align-content: flex-end;
+}
+
+.sum {
+    font-size: 42px;
+    color: var(--strongCyan);
+    font-weight: bold;
 }
