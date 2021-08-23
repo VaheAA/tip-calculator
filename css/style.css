@@ -1,117 +1,179 @@
 :root {
-    --strongCyan: hsl(172, 67%, 45%);
-    --veryDarkCyan: hsl(186, 14%, 43%);
-    --darkGrayCyan: hsl(184, 14%, 56%);
-    --lightGrayCyan: hsl(185, 41%, 84%);
-    --lighGrayCyan2: hsl(189, 41%, 97%);
-    --white: hsl(0, 0%, 100%);
+  --strongCyan: hsl(172, 67%, 45%);
+  --veryDarkCyan: hsl(186, 14%, 43%);
+  --verDarkCyan: hsl(183, 100%, 15%);
+  --darkGrayCyan: hsl(184, 14%, 56%);
+  --lightGrayCyan: hsl(185, 41%, 84%);
+  --lighGrayCyan2: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    padding: 0;
-	margin: 0;
-    font-family: 'Space Mono', monospace;
-    background-color: var(--lightGrayCyan);
+  padding: 0;
+  margin: 0;
+  font-family: 'Space Mono', monospace;
+  background-color: var(--lightGrayCyan);
 }
 
-h1, h2, h3, h4, p {
-    margin: 0;
-    padding: 0;
-}
-
-a, a:active {
-    text-decoration: none;
-    color: inherit;
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
 }
 
 input {
-    outline: none;
-    padding: 12px 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--lighGrayCyan2);
-    color: var(--veryDarkCyan);
-    font-weight: bold;
-    font-size: 18px;
-    position: relative;
+  padding: 0;
+  margin: 0;
 }
 
+a,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
 
+input {
+  outline: none;
+  padding: 12px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--lighGrayCyan2);
+  color: var(--veryDarkCyan);
+  font-weight: bold;
+  font-size: 18px;
+  position: relative;
+}
+
+.bill_label {
+  color: var(--veryDarkCyan);
+  font-weight: 600;
+}
 
 .wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: var(--white);
-    border-radius: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 25px;
 }
 
 .inner {
-    padding: 50px 30px;
+  padding: 50px 30px;
 }
 
 .logo {
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .calculator {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    background-color: var(--white);
-    border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  background-color: var(--white);
+  border-radius: 10px;
 }
 
 .calculator__left {
-    width: 100%;
+  width: 100%;
 }
 
 .calculator__form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .calculator__right {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: var(--veryDarkCyan);
-    padding: 50px 30px;
-    border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--verDarkCyan);
+  padding: 50px 30px;
+  border-radius: 25px;
 }
 
 .amount {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .total {
-    margin-bottom: auto;
-    display: flex;
-    justify-content: space-between;
+  margin-bottom: auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .title {
-    color: var(--white);
+  color: var(--white);
 }
 
 .title > span {
-    color: var(--lightGrayCyan);
-    font-size: 12px;
+  color: var(--lightGrayCyan);
+  font-size: 12px;
 }
 
 .reset-btn {
-    align-content: flex-end;
+  align-content: flex-end;
+  background-color: var(--veryDarkCyan);
+  border: none;
+  font-size: 25px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  color: var(--verDarkCyan);
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .sum {
-    font-size: 42px;
-    color: var(--strongCyan);
-    font-weight: bold;
+  font-size: 42px;
+  color: var(--strongCyan);
+  font-weight: bold;
+}
+
+.tip-percent {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-right: 0;
+}
+
+.tip-percent input:not(:last-of-type) {
+  display: none;
+}
+
+.tip-percent label {
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: 112px;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+#custom-tip {
+  padding: 10px 15px;
+  width: 112px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+
+.uncheked {
+  background-color: var(--verDarkCyan);
+  color: var(--white);
+}
+
+.checked {
+  background-color: var(--strongCyan);
+  color: var(--verDarkCyan);
 }
