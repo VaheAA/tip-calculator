@@ -17,6 +17,7 @@ tip5.addEventListener('change', () => {
         tip5Label.classList.toggle('uncheked')
         tip5Label.classList.toggle('checked');
     }
+    console.log(tip5.dataset)
 })
 
 tip10.addEventListener('change', () => {
