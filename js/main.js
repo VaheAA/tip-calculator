@@ -17,10 +17,12 @@ tipBtns.forEach(btn => {
         const people = numOfPeople.value;
         const tipFinal = (billAmount / 100) * tipSize;
         const personFinal = tipFinal / people
+
         sumTotal.textContent = '$' + tipFinal.toFixed(2)
         sumPerson.textContent = '$' + personFinal.toFixed(2);
         if (people === '' || people === 0) {
             sumPerson.textContent = '$' + tipFinal.toFixed(2)
+            numOfPeople.classList.add('empty')
         }
         resetBtn.classList.add('active-btn')
 

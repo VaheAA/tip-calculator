@@ -51,6 +51,16 @@ input {
   position: relative;
 }
 
+input::placeholder {
+  color: var(--darkGrayCyan);
+  font-family: 'Space Mono', monospace;
+
+}
+
+.empty {
+  border: 2px solid red;
+}
+
 .bill_label {
   color: var(--veryDarkCyan);
   font-weight: 600;
