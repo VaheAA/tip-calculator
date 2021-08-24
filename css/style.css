@@ -134,6 +134,10 @@ input {
   cursor: pointer;
 }
 
+.active-btn {
+  background-color: var(--strongCyan);
+}
+
 .sum {
   font-size: 42px;
   color: var(--strongCyan);
@@ -179,4 +183,14 @@ input {
 .checked {
   background-color: var(--strongCyan);
   color: var(--verDarkCyan);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }

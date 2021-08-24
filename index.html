@@ -24,7 +24,7 @@
             <div class="inner">
               <form class="calculator__form">
                 <label for="bill" class="bill_label">Bill</label>
-                <input type="text" name="bill" id="bill" />
+                <input type="number" name="bill" id="bill" dir="rtl" placeholder="0" />
                 <label for="tip" class="bill_label">Select tip %</label>
                 <div class="tip-percent">
                   <div class="tip-control uncheked" id="5" data-value="5">5%</div>
@@ -32,10 +32,10 @@
                   <div class="tip-control uncheked" id="15" data-value="15">15%</div>
                   <div class="tip-control uncheked" id="25" data-value="25">25%</div>
                   <div class="tip-control uncheked" id="50" data-value="50">50%</div>
-                  <input type="text" name="tip" id="custom-tip" placeholder="Custom" />
+                  <input type="number" name="tip" id="custom-tip" placeholder="Custom" />
                 </div>
                 <label for="people" class="bill_label">Number of people</label>
-                <input type="text" name="people" id="people" value="1" />
+                <input type="number" name="people" id="people" placeholder="0" dir="rtl"/>
               </form>
             </div>
           </div>
