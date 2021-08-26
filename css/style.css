@@ -61,6 +61,17 @@ input::placeholder {
   border: 2px solid red;
 }
 
+.error-msg {
+  display: none;
+  color: red;
+  font-weight: bold;
+}
+
+.text {
+  display: flex;
+  justify-content: space-between;
+}
+
 .bill_label {
   color: var(--veryDarkCyan);
   font-weight: 600;
