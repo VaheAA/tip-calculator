@@ -5,7 +5,8 @@ const sumTotal = document.querySelector('#sum-total');
 const sumPerson = document.querySelector("#sum-person");
 const resetBtn = document.querySelector('#reset-btn');
 const errMsg = document.querySelector('.error-msg');
-
+const customTip = document.querySelector('#custom-tip');
+const tipBlock = document.querySelector('.tip-percent')
 
 tipBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -43,9 +44,41 @@ tipBtns.forEach(btn => {
             numOfPeople.value = '';
             numOfPeople.classList.remove('empty');
             errMsg.style.display = 'none';
-
+            customTip.value = '';
+            tipBlock.classList.add('disabled');
+            numOfPeople.classList.add('disabled');
         })
     })
 
 })
 
+bill.addEventListener('keyup', () => {
+
+    if (bill.value === '') {
+        numOfPeople.classList.add('disabled');
+    } else {
+        numOfPeople.classList.remove('disabled');
+
+    }
+    console.log(bill.value)
+})
+
+numOfPeople.addEventListener('keyup', () => {
+    if (numOfPeople.value === '') {
+        tipBlock.classList.add('disabled');
+    } else {
+        tipBlock.classList.remove('disabled');
+    }
+})
+
+
+customTip.addEventListener('keyup', () => {
+    const tipSize = customTip.value;
+    const billAmount = bill.value;
+    const people = numOfPeople.value;
+    const tipFinal = (billAmount / 100) * tipSize;
+    const personFinal = tipFinal / people;
+
+    sumTotal.textContent = '$' + tipFinal.toFixed(2);
+    sumPerson.textContent = '$' + personFinal.toFixed(2);
+})

@@ -200,6 +200,11 @@ input::placeholder {
   justify-content: space-between;
 }
 
+.disabled {
+  pointer-events: none;
+  opacity: .4;
+}
+
 .tip-control {
   width: 112px;
   margin-bottom: 25px;
@@ -251,7 +256,8 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-
-
-
-
+@media (max-width: 728px) {
+  .calculator {
+    display: block;
+  }
+}
