@@ -19,10 +19,10 @@ tipBtns.forEach(btn => {
         const personFinal = tipFinal / people;
 
 
-        sumTotal.textContent = '$' + tipFinal.toFixed(2)
-        sumPerson.textContent = '$' + personFinal.toFixed(2);
+        sumTotal.textContent = '֏' + tipFinal.toFixed(2)
+        sumPerson.textContent = '֏' + personFinal.toFixed(2);
         if (people === '' || people === 0) {
-            sumPerson.textContent = '$' + tipFinal.toFixed(2)
+            sumPerson.textContent = '֏' + tipFinal.toFixed(2)
             numOfPeople.classList.add('empty');
             errMsg.style.display = 'inline';
             btn.classList.remove('checked');
@@ -79,6 +79,6 @@ customTip.addEventListener('keyup', () => {
     const tipFinal = (billAmount / 100) * tipSize;
     const personFinal = tipFinal / people;
 
-    sumTotal.textContent = '$' + tipFinal.toFixed(2);
-    sumPerson.textContent = '$' + personFinal.toFixed(2);
+    sumTotal.textContent = '֏' + tipFinal.toFixed(2);
+    sumPerson.textContent = '֏' + personFinal.toFixed(2);
 })
