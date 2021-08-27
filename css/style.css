@@ -12,6 +12,8 @@
   box-sizing: border-box;
 }
 
+
+
 body {
   padding: 0;
   margin: 0;
@@ -57,9 +59,28 @@ input::placeholder {
 
 }
 
+#bill {
+  cursor: pointer;
+}
+
+
+#bill:focus {
+  border: 2px solid var(--strongCyan);
+}
+
+#custom-tip {
+  cursor: pointer;
+}
+
+#custom-tip:focus {
+  border: 2px solid var(--strongCyan);
+
+}
+
 .empty {
   border: 2px solid red;
 }
+
 
 .error-msg {
   display: none;
@@ -92,6 +113,7 @@ input::placeholder {
 .logo {
   text-align: center;
   margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 .calculator {
@@ -153,6 +175,11 @@ input::placeholder {
   color: var(--verDarkCyan);
   border-radius: 5px;
   cursor: pointer;
+  transition: all .2s ease;
+}
+
+.reset-btn:hover {
+  background-color: var(--lightGrayCyan);
 }
 
 .active-btn {
@@ -182,6 +209,14 @@ input::placeholder {
   margin-bottom: 15px;
   margin-right: 15px;
   cursor: pointer;
+  transition: all .2s ease;
+  font-weight: bold;
+}
+
+
+.tip-control:hover {
+  background-color: var(--lightGrayCyan);
+  color: var(--verDarkCyan);
 }
 
 .tip-control> input {
@@ -215,4 +250,8 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+
+
+
 
